@@ -1,0 +1,63 @@
+.logo-icon {
+    background: #FFC72C;
+    border-radius: 7px;
+    width: 34px;
+    height: 34px;
+}
+
+.btn-open-app {
+    border: 1.5px solid #1a1a1a;
+    border-radius: 20px;
+}
+
+.shop-dropdown .dropdown-menu {
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.11);
+    min-width: 190px;
+}
+
+.mobile-menu-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu-item:last-child {
+    border-bottom: none;
+}
+
+#mobileMenu {
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.btn-light:hover {
+    color: #1668e3 !important;
+}
+
+
+.overflow-auto::-webkit-scrollbar {
+    display: none;
+}
+
+#staysSlider::-webkit-scrollbar {
+    display: none;
+}
+
+#travelStyleTabs .nav-link {
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+}
+
+#travelStyleTabs .nav-link:hover {
+    background: none;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.explore-tab {
+    transition: color 0.15s, border-bottom 0.15s;
+}
+
+.explore-tab:hover {
+    color: #1668e3 !important;
+}

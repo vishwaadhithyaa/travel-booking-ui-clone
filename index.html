@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expedia UI Clone </title>
+    <link rel="shortcut icon" href="./assets/images/unnamed.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+
+    <nav class="bg-white border-bottom shadow-sm ">
+        <div class="container-xl px-3 d-flex align-items-center flex-wrap py-3">
+
+            <!-- Logo -->
+            <img src="./assets/images/logo.svg" alt="logo" height="40px" class="p-2">
+
+            <!-- Shop Travel Dropdown (desktop) -->
+            <div class="dropdown d-none d-lg-block">
+                <button class="btn  border-0 dropdown-toggle fw-medium" data-bs-toggle="dropdown">
+                    Shop travel
+                </button>
+                <ul class="dropdown-menu rounded-3 border shadow-sm mt-2">
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-airplane me-2"></i>Flights</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-building me-2"></i>Stays</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-car-front me-2"></i>Cars</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-box-seam me-2"></i>Packages</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-ticket-perforated me-2"></i>Things to
+                            do</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-water me-2"></i>Cruises</a></li>
+                    <li><a class="dropdown-item py-2" href="#"><i class="bi bi-bus-front me-2"></i>Airport transfers</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Right -->
+            <div class="d-none d-lg-flex align-items-center gap-1 ms-auto">
+                <button class="btn btn-light border-1 btn-open-app bg-transparent fw-medium small px-3 py-1"
+                    style=" color: #1668e3;">
+                    Open app <i class="bi bi-download ms-1 " style="font-size:16px; color: #1668e3;"></i>
+                </button>
+
+                <button class="btn btn-light border-0 bg-transparent fw-medium small pe-0">INR </button>
+                <img src="./assets/images/in (1).svg" alt="" height="12px">
+                <a href="#" class="btn btn-light border-0 bg-transparent fw-medium small">List your property</a>
+                <a href="#" class="btn btn-light border-0 bg-transparent fw-medium small">Support</a>
+                <a href="#" class="btn btn-light border-0 bg-transparent fw-medium small">Trips</a>
+                <button class="btn btn-light border-0 bg-transparent"><i
+                        class="bi bi-chat-square-text fs-5"></i></button>
+                <button class="btn btn-light border-0 bg-transparent fw-semibold small">Sign in</button>
+            </div>
+
+            <!-- ── MOBILE ALWAYS-VISIBLE ITEMS (hidden on desktop) ── -->
+            <div class="d-flex d-lg-none align-items-center gap-1 ms-auto">
+
+                <!-- Shop travel -->
+                <div class="dropdown">
+                    <button class="btn  border-0 dropdown-toggle fw-medium small px-2" data-bs-toggle="dropdown">
+                        Shop travel
+                    </button>
+                    <ul class="dropdown-menu rounded-3 border shadow-sm mt-2">
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-airplane me-2"></i>Flights</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-building me-2"></i>Stays</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-car-front me-2"></i>Cars</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-box-seam me-2"></i>Packages</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-ticket-perforated me-2"></i>Things to
+                                do</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-water me-2"></i>Cruises</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-bus-front me-2"></i>Airport
+                                transfers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Open app -->
+                <button
+                    class="btn border-0 btn-open-app bg-transparent fw-medium small px-2 py-1 d-none d-sm-inline-flex align-items-center gap-1">
+                    Open app <i class="bi bi-download" style="font-size:11px"></i>
+                </button>
+
+                <!-- Trips -->
+                <a href="#" class="btn btn-light border-0 bg-transparent fw-medium small px-2">
+                    <i class="bi bi-briefcase me-1"></i>Trips
+                </a>
+
+                <!-- Sign in -->
+                <a href="#" class="btn btn-light border-0 bg-transparent fw-semibold small px-2">
+                    <i class="bi bi-person-circle me-1"></i>Sign in
+                </a>
+
+                <!-- Hamburger -->
+                <button class="btn border-0 bg-transparent text-dark px-1" data-bs-toggle="collapse"
+                    data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu (only remaining items) -->
+            <div class="collapse d-lg-none" id="mobileMenu">
+                <a href="#"
+                    class="mobile-menu-item d-flex align-items-center gap-3 py-3 px-1 text-decoration-none text-dark fw-medium">
+                    🇮🇳 INR
+                </a>
+                <a href="#"
+                    class="mobile-menu-item d-flex align-items-center gap-3 py-3 px-1 text-decoration-none text-dark fw-medium">
+                    <i class="bi bi-house"></i> List your property
+                </a>
+                <a href="#"
+                    class="mobile-menu-item d-flex align-items-center gap-3 py-3 px-1 text-decoration-none text-dark fw-medium">
+                    <i class="bi bi-question-circle"></i> Support
+                </a>
+                <a href="#"
+                    class="mobile-menu-item d-flex align-items-center gap-3 py-3 px-1 text-decoration-none text-dark fw-medium">
+                    <i class="bi bi-chat-square-text"></i> Messages
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Search Component (add below navbar) -->
+    <div class="bg-white py-4">
+        <div class="container-xl px-3 border rounded-4 py-4">
+
+            <!-- Tab Icons -->
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a href="#"
+                    class="d-flex flex-column align-items-center text-decoration-none gap-1 px-2 pb-2 border-bottom border-primary border-3 "
+                    style="color:#1668e3">
+                    <img src="./assets/images/light__bed.svg" alt="" height="40px">
+                    <span class="fw-semibold small" style="color:#1668e3">Stays</span>
+                </a>
+                <a href="#"
+                    class="d-flex flex-column align-items-center text-decoration-none gap-1 px-2 pb-2 text-dark">
+                    <img src="./assets/images/light__flight.svg" alt="" height="40px">
+                    <span class="fw-semibold small">Flights</span>
+                </a>
+                <a href="#"
+                    class="d-flex flex-column align-items-center text-decoration-none gap-1 px-2 pb-2 text-dark">
+                    <img src="./assets/images/light__car.svg" alt="" height="40px">
+                    <span class="fw-semibold small">Cars</span>
+                </a>
+                <a href="#"
+                    class="d-flex flex-column align-items-center text-decoration-none gap-1 px-2 pb-2 text-dark">
+                    <img src="./assets/images/light__package.svg" alt="" height="40px">
+                    <span class="fw-semibold small">Packages</span>
+                </a>
+            </div>
+
+            <hr class="mt-0 mb-4" />
+
+            <!-- Search Fields -->
+            <div class="d-flex flex-column flex-md-row align-items-stretch gap-2">
+
+                <!-- Where to -->
+                <div class=" border border-dark rounded-3 d-flex align-items-center px-3 py-2 gap-2 bg-white  w-100 w-md-50"
+                    style="min-height:56px;">
+                    <i class="bi bi-geo-alt text-secondary fs-5"></i>
+                    <input type="text" class="border-0 outline-0 w-100 bg-transparent fw-medium "
+                        placeholder="Where to?" style="outline:none; font-size:15px" />
+                </div>
+
+                <!-- Dates -->
+                <div class="border border-dark rounded-3 d-flex align-items-center px-3 py-2 gap-2 bg-white"
+                    style="min-width:240px; min-height:56px; cursor:pointer">
+                    <i class="bi bi-calendar3 text-secondary fs-5"></i>
+                    <div>
+                        <div class="text-secondary" style="font-size:11px; font-weight:600; letter-spacing:.4px">DATES
+                        </div>
+                        <div class="fw-medium" style="font-size:14px">Sun 22 Mar – Sat 28 Mar</div>
+                    </div>
+                </div>
+
+                <!-- Travellers -->
+                <div class="border border-dark rounded-3 d-flex align-items-center px-3 py-2 gap-2 bg-white"
+                    style="min-width:220px; min-height:56px; cursor:pointer;">
+                    <i class="bi bi-person text-secondary fs-5"></i>
+                    <div>
+                        <div class="text-secondary" style="font-size:11px; font-weight:600; letter-spacing:.4px">
+                            TRAVELLERS</div>
+                        <div class="fw-medium" style="font-size:14px">2 travellers, 1 room</div>
+                    </div>
+                </div>
+
+                <!-- Search Button -->
+                <button class="btn text-white fw-bold px-4 rounded-pill"
+                    style="background:#1668e3; min-height:56px; min-width:100px; font-size:16px">
+                    Search
+                </button>
+
+            </div>
+
+            <!-- Add a flight checkbox -->
+            <div class="mt-3 d-flex align-items-center gap-2">
+                <input type="checkbox" class="form-check-input mt-0" id="addFlight" style="width:18px;height:18px" />
+                <label for="addFlight" class="fw-medium small" style="cursor:pointer">Add a flight</label>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Member Prices Banner -->
+    <div class="mx-3 mx-xl-auto rounded-4 d-flex align-items-center justify-content-between px-4 py-3 mt-3"
+        style="background:#191e3b; max-width:1280px">
+        <div class="d-flex align-items-center gap-3">
+            <!-- Expedia snowflake-style icon -->
+            <img src="./assets/images/onekey__standard__always_light.svg" alt="" height="45px">
+            <span class="text-white fw-medium" style="font-size:15px">
+                Save 10% or more on over 100,000 hotels with Member Prices
+            </span>
+        </div>
+        <button class="btn text-white fw-semibold px-4 py-2 rounded-pill flex-shrink-0"
+            style="background:#1668e3; font-size:14px">
+            Sign in
+        </button>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     PROMO CARDS SECTION
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-4">
+        <div class="row g-3">
+
+            <!-- Card 1 -->
+            <!-- PROMO CARDS - slider on mobile, 3-col on desktop -->
+            <div class="d-flex d-lg-grid gap-3 overflow-auto pb-1"
+                style="scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; grid-template-columns: repeat(3,1fr); scrollbar-width:none;">
+
+                <!-- Card 1 -->
+                <div class="rounded-4 overflow-hidden d-flex flex-shrink-0 flex-lg-shrink-1 w-100 w-lg-100"
+                    style="background:#fddb32; min-height:140px; scroll-snap-align:start; min-width:280px">
+                    <div class="px-4 py-3 d-flex flex-column justify-content-between" style="flex:1">
+                        <p class="fw-bold mb-0" style="font-size:17px; color:#1a1a1a; line-height:1.3">Get alerts if
+                            flight prices drop</p>
+                        <a href="#" class="fw-semibold text-dark text-decoration-none" style="font-size:14px">Shop
+                            flights →</a>
+                    </div>
+                    <div style="width:180px; flex-shrink:0">
+                        <img src="./assets/images/1083696-0_2-TEaL-HP-SlimCard1-D-400x280.png" class="w-100 h-100"
+                            style="object-fit:cover" alt="Flight" />
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rounded-4 overflow-hidden d-flex flex-shrink-0 flex-lg-shrink-1 w-100 w-lg-100"
+                    style="background:#fddb32; min-height:140px; scroll-snap-align:start; min-width:280px">
+                    <div class="p-4 d-flex flex-column justify-content-between" style="flex:1">
+                        <p class="fw-bold mb-0" style="font-size:17px; color:#1a1a1a; line-height:1.3">You can save when
+                            you bundle flight + hotel together</p>
+                        <a href="#" class="fw-semibold text-dark text-decoration-none" style="font-size:14px">Book now
+                            →</a>
+                    </div>
+                    <div style="width:180px; flex-shrink:0">
+                        <img src="./assets/images/1299864-0_2-BEX-SBM-bundle.png" class="w-100 h-100"
+                            style="object-fit:cover" alt="Beach" />
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="rounded-4 overflow-hidden d-flex flex-shrink-0 flex-lg-shrink-1 w-100 w-lg-100"
+                    style="background:#fddb32; min-height:140px; scroll-snap-align:start; min-width:280px">
+                    <div class="p-4 d-flex flex-column justify-content-between" style="flex:1">
+                        <p class="fw-bold mb-0" style="font-size:17px; color:#1a1a1a; line-height:1.3">Members save 10%
+                            or more on over 100,000 hotels worldwide</p>
+                        <a href="#" class="fw-semibold text-dark text-decoration-none" style="font-size:14px">Treat
+                            yourself →</a>
+                    </div>
+                    <div style="width:180px; flex-shrink:0;">
+                        <img src="./assets/images/1303144-0_2-BEX-MembPrices-Web.png" class="w-100 h-100"
+                            style="object-fit:cover" alt="Hotel" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     DISCOVER STAYS SECTION
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-3">
+
+        <h2 class="fw-semibold mb-4" style="font-size:26px; color:#191e3b">Discover your new favourite stay</h2>
+
+        <!-- Scrollable row on mobile, 5-col grid on desktop -->
+        <div class="d-flex gap-3 overflow-auto pb-2"
+            style="scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+
+            <!-- Card -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Apart hotel" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold" style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Apart
+                        hotel</span>
+                </div>
+            </div>
+
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Spa" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Spa</span>
+                </div>
+            </div>
+
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Family friendly" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold" style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Family
+                        friendly</span>
+                </div>
+            </div>
+
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Apartment" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Apartment</span>
+                </div>
+            </div>
+
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Resort" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Resort</span>
+                </div>
+            </div>
+            <!-- Card 6 - Villa -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Villa" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Villa</span>
+                </div>
+            </div>
+
+            <!-- Card 7 - Boutique hotel -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Boutique hotel" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Boutique hotel</span>
+                </div>
+            </div>
+
+            <!-- Card 8 - Beach house -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Beach house" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold" style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Beach
+                        house</span>
+                </div>
+            </div>
+
+            <!-- Card 9 - Cabin -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Cabin" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Cabin</span>
+                </div>
+            </div>
+
+            <!-- Card 10 - Treehouse -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Treehouse" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Treehouse</span>
+                </div>
+            </div>
+
+            <!-- Card 11 - Penthouse -->
+            <div class="rounded-4 overflow-hidden flex-shrink-0 position-relative"
+                style="width:230px; height:330px; scroll-snap-align:start; cursor:pointer">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80" class="w-100 h-100"
+                    style="object-fit:cover" alt="Penthouse" />
+                <div class="position-absolute bottom-0 start-0 px-3 py-2">
+                    <span class="text-white fw-bold"
+                        style="font-size:16px; text-shadow:0 1px 4px rgba(0,0,0,.6)">Penthouse</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ═══════════════════════════════════════
+     LAST-MINUTE WEEKEND DEALS SECTION
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-4">
+
+        <!-- Header -->
+        <div class="d-flex align-items-start justify-content-between mb-4">
+            <div>
+                <h2 class="fw-bold mb-1" style="font-size:26px; color:#1a1a1a">Last-minute weekend deals</h2>
+                <p class="text-secondary mb-0" style="font-size:14px">Minimum 20% off deals for your next weekend
+                    getaway!</p>
+            </div>
+            <a href="#" class="btn btn-outline-primary rounded-pill px-4 fw-medium flex-shrink-0 ms-3"
+                style="font-size:14px; border-color:#1668e3; color:#1668e3">
+                See all deals
+            </a>
+        </div>
+
+        <!-- Cards Slider -->
+        <div class="d-flex gap-3 overflow-auto pb-2"
+            style="scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+
+            <!-- Deal Card 1 -->
+            <div class="flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+
+                <!-- Image with carousel -->
+                <div id="hotelCarousel1" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:210px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                    </div>
+                    <!-- Prev/Next -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel1"
+                        data-bs-slide="prev" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel1"
+                        data-bs-slide="next" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <!-- Wishlist -->
+                    <button
+                        class="position-absolute top-0 end-0 m-2 bg-white rounded-circle border-0 d-flex align-items-center justify-content-center shadow-sm"
+                        style="width:34px;height:34px;z-index:10;">
+                        <i class="bi bi-heart" style="font-size:14px"></i>
+                    </button>
+                </div>
+
+                <!-- Info -->
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Fabhotel Sai Palace</h6>
+                <p class="text-secondary mb-2" style="font-size:13px">Bengaluru</p>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background: #1a6c3c; font-size:12px">10.0</span>
+                    <span class="fw-semibold" style="font-size:13px">Exceptional</span>
+                    <span class="text-secondary" style="font-size:12px">(2 reviews)</span>
+                </div>
+                <div class="mb-2">
+                    <button class="btn btn-sm fw-semibold d-flex align-items-center gap-1 px-3 py-1 rounded-1"
+                        style="background:#1a4a93; color:#fff; font-size:12px;">
+                        <i class="bi bi-tag-fill"></i> Member Price available
+                    </button>
+                </div>
+                <div>
+                    <span class="fw-bold" style="font-size:18px; color:#1a1a1a">₹1,976</span>
+                    <span class="text-decoration-line-through text-secondary ms-1" style="font-size:14px">₹3,323</span>
+                </div>
+                <p class="text-secondary mb-0" style="font-size:12px">per night</p>
+                <p class="text-secondary mb-0" style="font-size:12px">₹4,156 total</p>
+                <p class="text-secondary" style="font-size:12px">includes taxes & fees</p>
+            </div>
+
+            <!-- Deal Card 2 -->
+            <!--  -->
+
+            <!-- Deal Card 3 -->
+            <div class="flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                <div id="hotelCarousel3" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:210px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel3"
+                        data-bs-slide="prev" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel3"
+                        data-bs-slide="next" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <button
+                        class="position-absolute top-0 end-0 m-2 bg-white rounded-circle border-0 d-flex align-items-center justify-content-center shadow-sm"
+                        style="width:34px;height:34px;z-index:10;">
+                        <i class="bi bi-heart text-secondary" style="font-size:14px"></i>
+                    </button>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Lemon Tree Premier</h6>
+                <p class="text-secondary mb-2" style="font-size:13px">Chennai</p>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px">9.2</span>
+                    <span class="fw-semibold" style="font-size:13px">Wonderful</span>
+                    <span class="text-secondary" style="font-size:12px">(34 reviews)</span>
+                </div>
+                <div class="mb-2">
+                    <button class="btn btn-sm fw-semibold d-flex align-items-center gap-1 px-3 py-1 rounded-1"
+                        style="background:#1a4a93; color:#fff; font-size:12px;">
+                        <i class="bi bi-tag-fill"></i> Member Price available
+                    </button>
+                </div>
+                <div>
+                    <span class="fw-bold" style="font-size:18px; color:#1a1a1a">₹3,100</span>
+                    <span class="text-decoration-line-through text-secondary ms-1" style="font-size:14px">₹5,800</span>
+                </div>
+                <p class="text-secondary mb-0" style="font-size:12px">per night</p>
+                <p class="text-secondary mb-0" style="font-size:12px">₹6,800 total</p>
+                <p class="text-secondary" style="font-size:12px">includes taxes & fees</p>
+            </div>
+
+            <!-- Deal Card 4 -->
+            <div class="flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                <div id="hotelCarousel4" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:210px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=400&q=80"
+                                class="w-100 h-100" style="object-fit:cover" alt="Hotel" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel4"
+                        data-bs-slide="prev" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel4"
+                        data-bs-slide="next" style="width:36px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:28px;height:28px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:12px"></i>
+                        </span>
+                    </button>
+                    <button
+                        class="position-absolute top-0 end-0 m-2 bg-white rounded-circle border-0 d-flex align-items-center justify-content-center shadow-sm"
+                        style="width:34px;height:34px;z-index:10;">
+                        <i class="bi bi-heart text-secondary" style="font-size:14px"></i>
+                    </button>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Radisson Blu Plaza</h6>
+                <p class="text-secondary mb-2" style="font-size:13px">Hyderabad</p>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px">7.8</span>
+                    <span class="fw-semibold" style="font-size:13px">Good</span>
+                    <span class="text-secondary" style="font-size:12px">(52 reviews)</span>
+                </div>
+                <div class="mb-2">
+                    <button class="btn btn-sm fw-semibold d-flex align-items-center gap-1 px-3 py-1 rounded-1"
+                        style="background:#1a4a93; color:#fff; font-size:12px;">
+                        <i class="bi bi-tag-fill"></i> Member Price available
+                    </button>
+                </div>
+                <div>
+                    <span class="fw-bold" style="font-size:18px; color:#1a1a1a">₹4,200</span>
+                    <span class="text-decoration-line-through text-secondary ms-1" style="font-size:14px">₹7,500</span>
+                </div>
+                <p class="text-secondary mb-0" style="font-size:12px">per night</p>
+                <p class="text-secondary mb-0" style="font-size:12px">₹9,100 total</p>
+                <p class="text-secondary" style="font-size:12px">includes taxes & fees</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- ═══════════════════════════════════════
+     STAYS FOR EVERY TRAVEL STYLE
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-4">
+
+        <!-- Header -->
+        <h2 class="fw-bold mb-1" style="font-size:26px; color:#1a1a1a">Stays for every travel style</h2>
+        <p class="text-secondary mb-3" style="font-size:14px">Average prices based on current calendar month</p>
+
+        <!-- Tabs -->
+        <ul class="nav border-bottom mb-4" id="travelStyleTabs">
+            <li class="nav-item">
+                <a class="nav-link active fw-semibold px-3 pb-2" href="#" data-tab="beach"
+                    style="color:#1668e3; border-bottom:2px solid #1668e3; border-radius:0; font-size:15px">Beach</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark fw-semibold px-3 pb-2" href="#" data-tab="culture"
+                    style="border-bottom:2px solid transparent; border-radius:0; font-size:15px">Culture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark fw-semibold px-3 pb-2" href="#" data-tab="ski"
+                    style="border-bottom:2px solid transparent; border-radius:0; font-size:15px">Ski</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark fw-semibold px-3 pb-2" href="#" data-tab="family"
+                    style="border-bottom:2px solid transparent; border-radius:0; font-size:15px">Family</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark fw-semibold px-3 pb-2" href="#" data-tab="wellness"
+                    style="border-bottom:2px solid transparent; border-radius:0; font-size:15px">Wellness and
+                    Relaxation</a>
+            </li>
+        </ul>
+
+        <!-- Cards Slider -->
+        <div class="position-relative">
+            <div class="d-flex gap-3 overflow-auto pb-2" id="staysSlider"
+                style="scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+
+                <!-- Beach Cards -->
+                <div class="stay-card beach flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="./assets/images/7ff34edd-55b8-45db-922c-9f31c1bf91a5.jpg" class="w-100 h-100"
+                            style="object-fit:cover" alt="Galveston" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Galveston</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Texas, United States of America</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹13,824</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card beach flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="./assets/images/a539ebd9-1ecd-4753-9834-d77f044b200e.jpg" class="w-100 h-100"
+                            style="object-fit:cover" alt="Miami" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Miami</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Florida, United States of America</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹5,832</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card beach flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="./assets/images/104853-Varanasi.webp" class="w-100 h-100" style="object-fit:cover"
+                            alt="Varanasi" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Varanasi</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Uttar Pradesh, India</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹3,827</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card beach flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Ubud" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Ubud</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Bali, Indonesia</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹7,227</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card beach flex-shrink-0" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Phuket" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Phuket</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Thailand</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹4,560</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <!-- Culture Cards -->
+                <div class="stay-card culture flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Jaipur" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Jaipur</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Rajasthan, India</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹2,900</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card culture flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Rome" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Rome</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Lazio, Italy</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹8,400</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card culture flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Kyoto" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Kyoto</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Japan</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹11,200</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card culture flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Agra" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Agra</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Uttar Pradesh, India</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹2,100</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <!-- Ski Cards -->
+                <div class="stay-card ski flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Aspen" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Aspen</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Colorado, United States</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹22,500</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card ski flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Zermatt" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Zermatt</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Valais, Switzerland</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹18,300</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card ski flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1547483238-f400e65ccd56?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Manali" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Manali</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Himachal Pradesh, India</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹3,200</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card ski flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Niseko" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Niseko</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Hokkaido, Japan</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹14,600</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <!-- Family Cards -->
+                <div class="stay-card family flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Orlando" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Orlando</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Florida, United States</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹9,800</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card family flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Dubai" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Dubai</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">United Arab Emirates</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹12,400</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card family flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Singapore" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Singapore</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Singapore</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹10,100</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card family flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Santorini" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Santorini</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Cyclades, Greece</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹15,700</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <!-- Wellness Cards -->
+                <div class="stay-card wellness flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="./assets/images/8ef0c40c.jpg" class="w-100 h-100" style="object-fit:cover"
+                            alt="Rishikesh" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Rishikesh</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Uttarakhand, India</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹2,600</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card wellness flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Chiang Mai" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Chiang Mai</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Thailand</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹3,900</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card wellness flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="./assets/images/6182fb8f.jpg" class="w-100 h-100" style="object-fit:cover"
+                            alt="Sedona" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Sedona</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">Arizona, United States</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹16,200</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+                <div class="stay-card wellness flex-shrink-0 d-none" style="width:280px; scroll-snap-align:start;">
+                    <div class="rounded-4 overflow-hidden mb-2" style="height:200px;">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&q=80"
+                            class="w-100 h-100" style="object-fit:cover" alt="Maldives" />
+                    </div>
+                    <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a">Maldives</h6>
+                    <p class="text-secondary mb-2" style="font-size:13px">South Asia</p>
+                    <p class="fw-bold mb-0" style="font-size:18px; color:#1a1a1a">₹28,500</p>
+                    <p class="text-secondary mb-0" style="font-size:12px">avg per night</p>
+                </div>
+
+            </div>
+
+            <!-- Next Arrow (desktop) -->
+            <button
+                class="d-none d-lg-flex position-absolute top-50 end-0 translate-middle-y bg-white border shadow-sm rounded-circle align-items-center justify-content-center"
+                style="width:40px;height:40px;z-index:10; transform:translate(50%,-50%);"
+                onclick="document.getElementById('staysSlider').scrollBy({left:600,behavior:'smooth'})">
+                <i class="bi bi-chevron-right text-dark"></i>
+            </button>
+
+        </div>
+    </div>
+    <!-- ═══════════════════════════════════════
+     EXPLORE UNIQUE STAYS SECTION
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-4">
+
+        <!-- Header -->
+        <h2 class="fw-bold mb-1" style="font-size:26px; color:#1a1a1a">Explore these unique stays</h2>
+        <p class="mb-3" style="font-size:14px; color:#555">
+            Showing deals for: <strong>3 Apr – 5 Apr</strong>
+        </p>
+
+        <!-- Cards Slider -->
+        <div class="d-flex gap-3 overflow-auto pb-2"
+            style="scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none;">
+
+            <!-- Card 1 -->
+            <div class="flex-shrink-0" style="width:300px; scroll-snap-align:start;">
+                <div id="uCarousel1" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:220px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="./assets/images/123b527a.jpg" class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&q=80"
+                                class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#uCarousel1"
+                        data-bs-slide="prev" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#uCarousel1"
+                        data-bs-slide="next" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                </div>
+                <!-- Rating -->
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px;">10</span>
+                    <span class="fw-semibold" style="font-size:13px;">Exceptional</span>
+                    <span class="text-secondary" style="font-size:12px;">(1 review)</span>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a; line-height:1.3;">Amā Stays & Trails
+                    Puttabong Cottage, Darjeeling</h6>
+                <p class="text-secondary mb-2" style="font-size:13px;">Darjeeling</p>
+                <p class="fw-bold mb-0" style="font-size:20px; color:#1a1a1a;">₹98,000</p>
+                <p class="text-secondary mb-0" style="font-size:12px;">₹2,31,280 total</p>
+                <p class="text-secondary" style="font-size:12px;">includes taxes & fees</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex-shrink-0" style="width:300px; scroll-snap-align:start;">
+                <div id="uCarousel2" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:220px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=500&q=80"
+                                class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80"
+                                class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#uCarousel2"
+                        data-bs-slide="prev" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#uCarousel2"
+                        data-bs-slide="next" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px;">10</span>
+                    <span class="fw-semibold" style="font-size:13px;">Exceptional</span>
+                    <span class="text-secondary" style="font-size:12px;">(1 review)</span>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a;">Rosastays South Goa</h6>
+                <p class="text-secondary mb-2" style="font-size:13px;">Cuncolim</p>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <p class="fw-bold mb-0" style="font-size:20px; color:#1a1a1a;">₹5,624</p>
+                    <p class="text-decoration-line-through text-secondary mb-0" style="font-size:14px;">₹7,499</p>
+                </div>
+                <p class="text-secondary mb-1" style="font-size:12px;">₹11,811 total</p>
+                <p class="text-secondary mb-2" style="font-size:12px;">includes taxes & fees</p>
+                <span class="badge fw-semibold px-3 py-2 rounded-2" style="background:#1a6c3c; font-size:12px;">25%
+                    off</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex-shrink-0" style="width:300px; scroll-snap-align:start;">
+                <div id="uCarousel3" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:220px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="./assets/images/262e9ffa.jpg" class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="./assets/images/6ec8cdde.jpg" class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#uCarousel3"
+                        data-bs-slide="prev" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#uCarousel3"
+                        data-bs-slide="next" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px;">9.0</span>
+                    <span class="fw-semibold" style="font-size:13px;">Wonderful</span>
+                    <span class="text-secondary" style="font-size:12px;">(2 reviews)</span>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a;">Beachparadise Daycruise houseboat</h6>
+                <p class="text-secondary mb-2" style="font-size:13px;">Ambalapuzha</p>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <p class="fw-bold mb-0" style="font-size:20px; color:#1a1a1a;">₹7,501</p>
+                    <p class="text-decoration-line-through text-secondary mb-0" style="font-size:14px;">₹8,824</p>
+                </div>
+                <p class="text-secondary mb-1" style="font-size:12px;">₹17,860 total</p>
+                <p class="text-secondary mb-2" style="font-size:12px;">includes taxes & fees</p>
+                <span class="badge fw-semibold px-3 py-2 rounded-2" style="background:#1a6c3c; font-size:12px;">15%
+                    off</span>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex-shrink-0" style="width:300px; scroll-snap-align:start;">
+                <div id="uCarousel4" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:220px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="./assets/images/28ddd410-cd80-4e9a-bfdd-6553b4b082a0.jpg" class="w-100 h-100"
+                                style="object-fit:cover" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="./assets/images/a7d8df51.jpg" class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#uCarousel4"
+                        data-bs-slide="prev" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#uCarousel4"
+                        data-bs-slide="next" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px;">10</span>
+                    <span class="fw-semibold" style="font-size:13px;">Exceptional</span>
+                    <span class="text-secondary" style="font-size:12px;">(1 review)</span>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a; line-height:1.3;">Brij Pola, Jawai –
+                    Luxury Jungle Camp with Private Pools</h6>
+                <p class="text-secondary mb-2" style="font-size:13px;">Bali</p>
+                <p class="fw-bold mb-0" style="font-size:20px; color:#1a1a1a;">₹49,500</p>
+                <p class="text-secondary mb-0" style="font-size:12px;">₹1,21,770 total</p>
+                <p class="text-secondary" style="font-size:12px;">includes taxes & fees</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flex-shrink-0" style="width:300px; scroll-snap-align:start;">
+                <div id="uCarousel5" class="carousel slide rounded-4 overflow-hidden mb-3 position-relative"
+                    style="height:220px;">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <img src="./assets/images/2f352f85-47fd-4472-a333-0efa9293448f.jpg" class="w-100 h-100"
+                                style="object-fit:cover" />
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=500&q=80"
+                                class="w-100 h-100" style="object-fit:cover" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#uCarousel5"
+                        data-bs-slide="prev" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-left text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#uCarousel5"
+                        data-bs-slide="next" style="width:40px;">
+                        <span class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+                            style="width:32px;height:32px;">
+                            <i class="bi bi-chevron-right text-dark" style="font-size:13px"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="text-white fw-bold px-2 py-1 rounded"
+                        style="background:#1a6c3c; font-size:12px;">10</span>
+                    <span class="fw-semibold" style="font-size:13px;">Exceptional</span>
+                    <span class="text-secondary" style="font-size:12px;">(3 reviews)</span>
+                </div>
+                <h6 class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a;">RAA Luxury Resort Jaiтаl</h6>
+                <p class="text-secondary mb-2" style="font-size:13px;">Jaipur</p>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <p class="fw-bold mb-0" style="font-size:20px; color:#1a1a1a;">₹30,000</p>
+                    <p class="text-decoration-line-through text-secondary mb-0" style="font-size:14px;">₹42,000</p>
+                </div>
+                <p class="text-secondary mb-1" style="font-size:12px;">₹70,800 total</p>
+                <p class="text-secondary mb-2" style="font-size:12px;">includes taxes & fees</p>
+                <span class="badge fw-semibold px-3 py-2 rounded-2" style="background:#1a6c3c; font-size:12px;">20%
+                    off</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- ═══════════════════════════════════════
+     EXPLORE A WORLD OF TRAVEL
+═══════════════════════════════════════ -->
+    <div class="container-xl px-3 py-4">
+
+        <h2 class="fw-bold mb-3" style="font-size:26px; color:#1a1a1a">Explore a world of travel with Expedia</h2>
+
+        <!-- Tabs -->
+        <div class="d-flex gap-0 overflow-auto border-bottom mb-4" style="scrollbar-width:none;">
+            <a href="#" class="explore-tab fw-semibold px-3 pb-2 text-decoration-none flex-shrink-0 active"
+                style="font-size:14px; color:#1668e3; border-bottom:2px solid #1668e3; white-space:nowrap;"
+                data-etab="domestic">
+                Hotel deals on domestic destinations
+            </a>
+            <a href="#" class="explore-tab fw-semibold px-3 pb-2 text-decoration-none flex-shrink-0"
+                style="font-size:14px; color:#555; border-bottom:2px solid transparent; white-space:nowrap;"
+                data-etab="international">
+                Book hotels internationally
+            </a>
+            <a href="#" class="explore-tab fw-semibold px-3 pb-2 text-decoration-none flex-shrink-0"
+                style="font-size:14px; color:#555; border-bottom:2px solid transparent; white-space:nowrap;"
+                data-etab="domestic-flights">
+                Find flight deals to domestic cities
+            </a>
+            <a href="#" class="explore-tab fw-semibold px-3 pb-2 text-decoration-none flex-shrink-0"
+                style="font-size:14px; color:#555; border-bottom:2px solid transparent; white-space:nowrap;"
+                data-etab="intl-flights">
+                International flights
+            </a>
+            <a href="#" class="explore-tab fw-semibold px-3 pb-2 text-decoration-none flex-shrink-0"
+                style="font-size:14px; color:#555; border-bottom:2px solid transparent; white-space:nowrap;"
+                data-etab="more">
+                More destinations
+            </a>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="row g-2 mb-5" id="exploreLinks">
+
+            <!-- domestic (default visible) -->
+            <div class="col-6 col-md-3 explore-links domestic">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Nangi
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Delhi
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">South Goa
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Goa
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Nandi Hills
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Manali
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic">
+                <a href="#" class="d-block text-decoration-none mb-1"
+                    style="color:#1668e3; font-size:14px;">Mahabaleshwar Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Bangalore
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Kutta
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Ooty
+                    Hotels</a>
+            </div>
+
+            <!-- international (hidden) -->
+            <div class="col-6 col-md-3 explore-links international d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Dubai
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Paris
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">London
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links international d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Singapore
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Bangkok
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Bali
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links international d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">New York
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Tokyo
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links international d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Maldives
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Sydney
+                    Hotels</a>
+            </div>
+
+            <!-- domestic-flights (hidden) -->
+            <div class="col-6 col-md-3 explore-links domestic-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Mumbai</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Delhi</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Goa</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Bangalore</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Chennai</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Hyderabad</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Kolkata</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Jaipur</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links domestic-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Kochi</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Pune</a>
+            </div>
+
+            <!-- intl-flights (hidden) -->
+            <div class="col-6 col-md-3 explore-links intl-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Dubai</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    London</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    New York</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links intl-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Singapore</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Bangkok</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Paris</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links intl-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Tokyo</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Sydney</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links intl-flights d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Toronto</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Flights to
+                    Bali</a>
+            </div>
+
+            <!-- more (hidden) -->
+            <div class="col-6 col-md-3 explore-links more d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Shimla
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Mussoorie
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Darjeeling
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links more d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Pondicherry
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Coorg
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Munnar
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links more d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Udaipur
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Varanasi
+                    Hotels</a>
+            </div>
+            <div class="col-6 col-md-3 explore-links more d-none">
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Agra
+                    Hotels</a>
+                <a href="#" class="d-block text-decoration-none mb-1" style="color:#1668e3; font-size:14px;">Amritsar
+                    Hotels</a>
+            </div>
+
+        </div>
+
+        <!-- ── App Download Banner ── -->
+        <div class="rounded-4 overflow-hidden border d-flex flex-row" style="min-height:260px;">
+
+            <!-- Left Image -->
+            <div style="width:35%; min-width:120px; flex-shrink:0;">
+                <img src="./assets/images/BEX_Footer.jpg" class="w-100 h-100" style="object-fit:cover;"
+                    alt="Expedia App" />
+            </div>
+
+            <!-- Middle Text -->
+            <div class="p-4 p-md-5 d-flex flex-column justify-content-center flex-grow-1">
+                <h3 class="fw-bold mb-3" style="font-size:28px; color:#1a1a1a; line-height:1.2;">
+                    Go further with the Expedia app
+                </h3>
+                <p class="text-secondary mb-4" style="font-size:15px; max-width:480px; line-height:1.6;">
+                    Save on select hotels and earn double points when you book on the app. Our app deals help you to
+                    save on trips so you can travel more and manage it all on the go.
+                </p>
+                <p class="fw-bold mb-0" style="font-size:15px; color:#1a1a1a;">
+                    Scan the QR code with your device camera and download our app
+                </p>
+            </div>
+
+            <!-- Right QR Code -->
+            <div class="d-none d-lg-flex align-items-center justify-content-center px-4" style="flex-shrink:0;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://www.expedia.com/app"
+                    width="140" height="140" alt="QR Code" class="rounded-2" />
+            </div>
+
+            <!-- Mobile QR (shown only on small screens) -->
+            <!-- Left Image — visible on ALL screens -->
+            <!-- <div style="width:100%; max-height:200px; overflow:hidden;" class="d-lg-none">
+                <img src="./assets/images/BEX_Footer.jpg" class="w-100"
+                    style="object-fit:cover; height:200px;" alt="Expedia App" />
+            </div> -->
+
+
+        </div>
+    </div>
+    <!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+    <footer style="background:#eef0f5;">
+        <div class="container-xl px-3 py-5">
+
+            <!-- Expedia Group Logo -->
+            <div class="mb-4">
+                <span class="fw-bold" style="font-size:22px; color:#1a1a1a; font-style:italic; letter-spacing:-0.5px;">
+                    expedia group<sup style="font-size:11px;">™</sup>
+                </span>
+            </div>
+
+            <!-- Footer Links Grid -->
+            <div class="row g-4 mb-5">
+
+                <!-- Company -->
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" style="font-size:15px; color:#1a1a1a;">Company</h6>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">About
+                        us</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Jobs</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">List
+                        your property</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Partnerships</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Newsroom</a>
+                </div>
+
+                <!-- Explore -->
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" style="font-size:15px; color:#1a1a1a;">Explore</h6>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">India
+                        travel guide</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Hotels
+                        in India</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Holiday
+                        rentals in India</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Holiday
+                        packages in India</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Domestic flights</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Car
+                        hire in India</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">All
+                        accommodation types</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Travel
+                        blog</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Rewards
+                        with One Key™</a>
+                </div>
+
+                <!-- Policies -->
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" style="font-size:15px; color:#1a1a1a;">Policies</h6>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Privacy</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Cookies</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Terms
+                        of use</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">One
+                        Key™ terms and conditions</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Vrbo
+                        terms and conditions</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Content
+                        guidelines and reporting content</a>
+                </div>
+
+                <!-- Help -->
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" style="font-size:15px; color:#1a1a1a;">Help</h6>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">Support</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Change
+                        or cancel your hotel or holiday rental booking</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Refund
+                        process and timelines</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none" style="color:#1668e3; font-size:14px;">Book a
+                        flight using an airline credit</a>
+                    <a href="#" class="d-block mb-2 text-decoration-none"
+                        style="color:#1668e3; font-size:14px;">International travel documents</a>
+                </div>
+
+            </div>
+
+            <hr style="border-color:#d0d3da;" />
+
+            <!-- Security Badge -->
+            <div class="mb-4">
+                <img src="./assets/images/secure.png" alt="">
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-center text-secondary mb-0" style="font-size:13px;">
+                © 2026 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Expedia Logo are
+                trademarks or registered trademarks of Expedia, Inc.
+            </p>
+            <p class="pt-4 " style="color: #191e3b;">© 2026 Expedia UI Clone — Portfolio Project.
+                This site is a UI clone created for educational purposes and is not affiliated with Expedia.
+            </p>
+
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.explore-tab').forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Reset all tabs
+                document.querySelectorAll('.explore-tab').forEach(t => {
+                    t.style.color = '#555';
+                    t.style.borderBottom = '2px solid transparent';
+                });
+
+                // Activate clicked
+                this.style.color = '#1668e3';
+                this.style.borderBottom = '2px solid #1668e3';
+
+                const selected = this.dataset.etab;
+
+                // Hide all link groups, show selected
+                document.querySelectorAll('.explore-links').forEach(el => {
+                    el.classList.add('d-none');
+                });
+                document.querySelectorAll(`.explore-links.${selected}`).forEach(el => {
+                    el.classList.remove('d-none');
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('#travelStyleTabs .nav-link').forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Reset all tabs
+                document.querySelectorAll('#travelStyleTabs .nav-link').forEach(t => {
+                    t.style.color = '#1a1a1a';
+                    t.style.borderBottom = '2px solid transparent';
+                    t.classList.remove('active');
+                });
+                // Activate clicked tab
+                this.style.color = '#1668e3';
+                this.style.borderBottom = '2px solid #1668e3';
+                this.classList.add('active');
+
+                const selected = this.dataset.tab;
+
+                // Hide all cards, show selected
+                document.querySelectorAll('.stay-card').forEach(card => {
+                    if (card.classList.contains(selected)) {
+                        card.classList.remove('d-none');
+                    } else {
+                        card.classList.add('d-none');
+                    }
+                });
+
+                // Reset scroll
+                document.getElementById('staysSlider').scrollTo({ left: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
